@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @lead.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lead.email %>
+</p>
+
+<p>
+  <strong>Ipv4:</strong>
+  <%= @lead.ipv4 %>
+</p>
+
+<p>
+  <strong>Salary expected:</strong>
+  <%= @lead.salary_expected %>
+</p>
+
+<p>
+  <strong>Driver license:</strong>
+  <%= @lead.driver_license %>
+</p>
+
+<p>
+  <strong>Have a vehicle:</strong>
+  <%= @lead.have_a_vehicle %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @lead.availability %>
+</p>
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

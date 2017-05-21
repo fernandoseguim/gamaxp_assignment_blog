@@ -1,0 +1,52 @@
+<%= form_with(model: lead, local: true) do |form| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :lead_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :lead_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ipv4 %>
+    <%= form.text_field :ipv4, id: :lead_ipv4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary_expected %>
+    <%= form.text_field :salary_expected, id: :lead_salary_expected %>
+  </div>
+
+  <div class="field">
+    <%= form.label :driver_license %>
+    <%= form.number_field :driver_license, id: :lead_driver_license %>
+  </div>
+
+  <div class="field">
+    <%= form.label :have_a_vehicle %>
+    <%= form.number_field :have_a_vehicle, id: :lead_have_a_vehicle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :availability %>
+    <%= form.number_field :availability, id: :lead_availability %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
