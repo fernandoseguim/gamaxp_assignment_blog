@@ -8,7 +8,7 @@
       <p><%= post.categorie %></p>
     </div>
     <div class="meta">
-      <time class="published" datetime="2015-11-01">November 1, 2015</time>
+      <time class="published" datetime="2015-11-01"><%= post.updated_at.strftime("%d-%m-%Y") %></time>
       <a href="#" class="author">
         <span class="name"><%= post.author %></span><img src="/assets/avatar.jpg" alt=""/></a>
     </div>
@@ -18,7 +18,7 @@
   <footer>
     <ul class="actions">
       <li>
-        <a href="#" class="button big">Continue Reading</a>
+        <%= link_to 'Continue lendo', post, class: "button big" %>
       </li>
     </ul>
     <ul class="stats">
@@ -34,18 +34,14 @@
     </ul>
   </footer>
 
-  <%= link_to 'Show', post %>
-  <%= link_to 'Edit', edit_post_path(post) %>
-  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-
 </article>
 <% end %>
 
 <ul class="actions pagination">
   <li>
-    <a href="" class="disabled button big previous">Previous Page</a>
+    <a href="" class="disabled button big previous">Pagina anterior</a>
   </li>
   <li>
-    <a href="#" class="button big next">Next Page</a>
+    <a href="#" class="button big next">Próxima página</a>
   </li>
 </ul>

@@ -1,24 +1,19 @@
-<p id="notice"><%= notice %></p>
+<article class="post">
+  <header>
+    <div class="title">
+      <h2>
+        <a href="#"><%= @post.title %></a>
+      </h2>
+      <p><%= @post.categorie %></p>
+    </div>
+    <div class="meta">
+      <time class="published" datetime="2015-11-01"><%= @post.updated_at.strftime("%d-%m-%Y") %></time>
+      <a href="#" class="author">
+        <span class="name"><%= @post.author %></span><img src="/assets/avatar.jpg" alt=""/></a>
+    </div>
+  </header>
+  <a href="#" class="image featured"><img src="/assets/pic01.jpg" alt=""/></a>
+  <p><%= @post.description %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Categorie:</strong>
-  <%= @post.categorie %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Voltar', posts_path, class: "button big" %>
+</article>
