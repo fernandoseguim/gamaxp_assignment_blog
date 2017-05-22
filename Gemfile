@@ -27,3 +27,9 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 
 gem 'listen'
+
+gem "font-awesome-rails"
+
+gem 'sass-rails'
+
+gem 'skeleton-rails'
