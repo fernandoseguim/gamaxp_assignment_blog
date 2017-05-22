@@ -14,7 +14,9 @@ class PostsController < ApplicationController
 
   #GET /posts/category
   #GET /posts/noticias
-  def show_by_category
+  def postscategory
+    category = params[:categorie]
+    @posts = Post.where "categorie = ?", category
   end
 
   # GET /posts/new

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :leads
+  resources :leads, only: [:create]
   resources :posts
-  get "posts" => "posts#index"
+  get "posts/categories/:categorie" =>"posts#postscategory", as: :posts_categories
   root "posts#index"
 end
