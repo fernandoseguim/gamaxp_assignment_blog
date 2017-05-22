@@ -15,5 +15,32 @@
   <a href="#" class="image featured"><img src="/assets/pic01.jpg" alt=""/></a>
   <p><%= @post.description %></p>
 
+<<<<<<< HEAD
   <%= link_to 'Voltar', posts_path, class: "button big" %>
 </article>
+=======
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @post.categorie %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @post.description %>
+</p>
+
+<%= render 'form-leads', lead: @lead %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+>>>>>>> learn

@@ -1,0 +1,39 @@
+<section>
+  <%= form_for Lead.new do |form| %>
+
+    <div class="field">
+      <%= form.label "Nome" %>
+      <%= form.text_field :nome, id: :lead_nome , class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "E-mail" %>
+      <%= form.text_field :email, id: :lead_email , class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Expectativa Salarial" %>
+      <%= form.select :salary_expected, ['até 1000', '1001 à 3000', 'mais que 3000'] , class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Possui habilitação?" %>
+      <%= form.number_field :driver_license, id: :lead_driver_license , class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Tem veículo próprio?" %>
+      <%= form.number_field :have_a_vehicle, id: :lead_have_a_vehicle , class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "Tem disponibilidade imediata?" %>
+      <%= form.number_field :availability, id: :lead_availability , class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Registrar-se", class: "btn btn-primary"%>
+    </div>
+
+  <% end %>
+</section>
